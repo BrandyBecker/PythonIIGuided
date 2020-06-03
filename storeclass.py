@@ -6,10 +6,11 @@ class Store:
     def __str__(self):
         output = f"{self.name}\n"
         for idx, category in enumerate(self.categories):
-            output += " " + str(idx + 1) + ". " + category + "\n"
+            output += "  " + str(idx+1) + ". " + category + "\n"
+        return output
 
-            return output
-
-my_store = Store("Dollar General", ["Groceries","Clothing","Accessories","Hair Care","Toiletries","Cleaning Supplies"])
+my_store = Store("The Dugout", ["Running", "Baseball", "Basketball"])
 
 print(my_store)
+selection = input("Select the number of a department:")
+print("The user selected " + str(selection))
